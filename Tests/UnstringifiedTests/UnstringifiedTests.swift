@@ -1,5 +1,5 @@
-import Unstringified
 import XCTest
+import Unstringified
 
 final class UnstringifiedTests: XCTestCase {
     private final class _Foo {}

@@ -7,15 +7,36 @@ let package = Package(
     targets: [
         .target(
             name: "unstringify",
-            dependencies: ["Unstringified"]),
+            dependencies: ["Unstringified", "UnstringifyFramework"]),
         .target(
             name: "Unstringified",
             dependencies: []),
+        .target(
+            name: "findStrings",
+            dependencies: ["UnstringifyFramework"]),
+        .target(
+            name: "findAndroidStrings",
+            dependencies: ["UnstringifyFramework"]),
+        .target(
+            name: "UnstringifyFramework",
+            dependencies: []),
+        .target(
+            name: "CLITestFramework",
+            dependencies: []),
         .testTarget(
             name: "UnstringifyTests",
-            dependencies: ["unstringify"]),
+            dependencies: ["CLITestFramework", "unstringify"]),
         .testTarget(
             name: "UnstringifiedTests",
             dependencies: ["Unstringified"]),
+        .testTarget(
+            name: "FindStringsTests",
+            dependencies: ["CLITestFramework", "findStrings"]),
+        .testTarget(
+            name: "FindAndroidStringsTests",
+            dependencies: ["CLITestFramework", "findAndroidStrings"]),
+        .testTarget(
+            name: "UnstringifyFrameworkTests",
+            dependencies: ["UnstringifyFramework"]),
     ]
 )

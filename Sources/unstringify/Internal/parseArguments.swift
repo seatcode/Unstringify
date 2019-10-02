@@ -9,7 +9,7 @@ func parseArguments(from arguments: [String] = CommandLine.arguments) throws -> 
     }
 
     func printUsage() {
-        print("Usage: \(arguments[0]) inputPath outputPath")
+        print("\nUsage: \(arguments[0]) inputPath outputPath\n")
     }
 
     if arguments.count < 3 {

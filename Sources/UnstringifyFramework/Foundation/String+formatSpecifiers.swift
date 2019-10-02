@@ -1,7 +1,7 @@
 import Foundation
 
 extension String {
-    func formatSpecifiers() throws -> [String] {
+    public func formatSpecifiers() throws -> [String] {
         // Regex pattern for format specifiers (`% flags width .precision size type`):
         //
         // - mark: %
