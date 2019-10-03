@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = 'Unstringify'
-  s.version  = '0.1.0'
+  s.version  = '0.2.0'
   s.summary  = 'Code generator for strong-typing localizable strings.'
   s.homepage = 'https://github.com/metrolab/Unstringify'
   s.license  = 'MIT'
