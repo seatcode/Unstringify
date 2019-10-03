@@ -8,4 +8,5 @@
 /.build
 /Packages
 /*.xcodeproj
+xcuserdata/
 /.swiftpm
