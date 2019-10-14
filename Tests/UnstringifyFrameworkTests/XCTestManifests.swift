@@ -6,7 +6,14 @@ extension UnstringifyFrameworkTests {
     //   `swift test --generate-linuxmain`
     // to regenerate.
     static let __allTests__UnstringifyFrameworkTests = [
-        ("test", test),
+        ("testContainsHTML", testContainsHTML),
+        ("testFormatSpecifiers", testFormatSpecifiers),
+        ("testIsINfoPlistValueLine", testIsINfoPlistValueLine),
+        ("testIsKeyValueLine", testIsKeyValueLine),
+        ("testLocalizableKey", testLocalizableKey),
+        ("testMatches", testMatches),
+        ("testParseKeys", testParseKeys),
+        ("testRemovingCharacterAt", testRemovingCharacterAt),
     ]
 }
 

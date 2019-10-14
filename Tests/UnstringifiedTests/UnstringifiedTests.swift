@@ -6,8 +6,12 @@ final class UnstringifiedTests: XCTestCase {
 
     private enum Foo: String, Unstringified {
         typealias StringType = String
+
         case foo
-        var localizableStringsBundle: Bundle { return Bundle(for: _Foo.self) }
+
+        var localizableStringsTableName: String? { return nil }
+
+        var localizableStringsBundle: Bundle? { return Bundle(for: _Foo.self) }
     }
 
     func testString() throws {

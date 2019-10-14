@@ -33,13 +33,13 @@ func parseKeys(_ content: String) throws -> Keys {
         standardKeys.append("👻")
     }
     if formattedKeys.isEmpty {
-        formattedKeys.append(FormatKey(key: "👻", specifiers: []))
+        formattedKeys.append(FormatKey(key: "👻", specifiers: ["Void"]))
     }
     if richKeys.isEmpty {
         richKeys.append("👻")
     }
     if richFormattedKeys.isEmpty {
-        richFormattedKeys.append(FormatKey(key: "👻", specifiers: []))
+        richFormattedKeys.append(FormatKey(key: "👻", specifiers: ["Void"]))
     }
 
     return Keys(standard: standardKeys,

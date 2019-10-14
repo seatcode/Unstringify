@@ -5,16 +5,8 @@ extension Unstringified {
         guard !isRunningTests else {
             return key
         }
-        let _UncrustifiedBundle = localizableStringsBundle
-        let bundleURL = _UncrustifiedBundle.bundleURL
-        let bundleName = bundleURL.lastPathComponent
-        let resource = (bundleName as NSString).deletingPathExtension
-        guard let path = _UncrustifiedBundle.path(forResource: resource, ofType: "bundle") else {
-            return key
-        }
-        guard let bundle = Bundle(path: path) else {
-            return key
-        }
-        return NSLocalizedString(key, bundle: bundle, comment: "")
+        let bundle = localizableStringsBundle ?? Bundle.main
+        let tableName = localizableStringsTableName
+        return NSLocalizedString(key, tableName: tableName, bundle: bundle, comment: "")
     }
 }

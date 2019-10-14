@@ -44,7 +44,7 @@ s.dependency 'Unstringified'
 Add a Build Phase that generates the code for the `Unstringified` enumerations:
 
 ```bash
-"$PODS_ROOT/Unstringify/unstringify" "$SRCROOT/path/to/module/en.lproj/Localizable.strings" "$SRCROOT/path/to/module/Unstringified.generated.string"
+"$PODS_ROOT/Unstringify/unstringify" "$SRCROOT/path/to/module/en.lproj/Localizable.strings" "$SRCROOT/path/to/module/Unstringified.generated.swift"
 ```
 
 #### Swift Package Manager
@@ -60,7 +60,7 @@ dependencies: [
 Execute the CLI passing as arguments the *input strings file* and the *path to generated output file*:
 
 ```sh
-swift run unstringify path/to/module/en.lproj/Localizable.string path/to/module/Unstringified.generated.string
+swift run unstringify path/to/module/en.lproj/Localizable.string path/to/module/Unstringified.generated.swift
 ```
 
 In order to use the generated file, you will need to *link* `Unstringified` to the module that contains the generated file and the original strings files.  
@@ -94,8 +94,22 @@ import Unstringified
 private final class _Unstringified {}
 
 extension Unstringified {
-    public var localizableStringsBundle: Bundle {
-        return Bundle(for: _Unstringified.self)
+    public var localizableStringsTableName: String? {
+        return nil
+    }
+
+    public var localizableStringsBundle: Bundle? {
+        let _UnstringifiedBundle = Bundle(for: _Unstringified.self)
+        guard _UnstringifiedBundle.bundleIdentifier != Bundle.main.bundleIdentifier else {
+            return Bundle.main
+        }
+        let bundleURL = _UnstringifiedBundle.bundleURL
+        let bundleName = bundleURL.lastPathComponent
+        let resource = (bundleName as NSString).deletingPathExtension
+        guard let path = _UnstringifiedBundle.path(forResource: resource, ofType: "bundle") else {
+            return nil
+        }
+        return Bundle(path: path)
     }
 }
 
@@ -116,7 +130,7 @@ public enum RichText: String, Unstringified {
 
 public enum RichFormat: Unstringified {
     public typealias StringType = NSAttributedString
-    case 👻()
+    case 👻(Void)
 }
 ```
 

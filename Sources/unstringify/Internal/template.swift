@@ -11,8 +11,22 @@ func template(keys: [String], formattedKeys: [FormatKey], richKeys: [String], ri
             private final class _Unstringified {}
 
             extension Unstringified {
-            \tpublic var localizableStringsBundle: Bundle {
-            \t\treturn Bundle(for: _Unstringified.self)
+            \tpublic var localizableStringsTableName: String? {
+            \t\treturn nil
+            \t}
+
+            \tpublic var localizableStringsBundle: Bundle? {
+            \t\tlet _UnstringifiedBundle = Bundle(for: _Unstringified.self)
+            \t\tguard _UnstringifiedBundle.bundleIdentifier != Bundle.main.bundleIdentifier else {
+            \t\t\treturn Bundle.main
+            \t\t}
+            \t\tlet bundleURL = _UnstringifiedBundle.bundleURL
+            \t\tlet bundleName = bundleURL.lastPathComponent
+            \t\tlet resource = (bundleName as NSString).deletingPathExtension
+            \t\tguard let path = _UnstringifiedBundle.path(forResource: resource, ofType: "bundle") else {
+            \t\t\treturn nil
+            \t\t}
+            \t\treturn Bundle(path: path)
             \t}
             }
 

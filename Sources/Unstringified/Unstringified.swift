@@ -5,7 +5,8 @@ public protocol Unstringified {
 
     var string: StringType { get }
     var uppercased: StringType { get }
-    var localizableStringsBundle: Bundle { get }
+    var localizableStringsTableName: String? { get }
+    var localizableStringsBundle: Bundle? { get }
 }
 
 extension Unstringified where Self: RawRepresentable, Self.RawValue == String, StringType == String {
