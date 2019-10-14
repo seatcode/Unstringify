@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+# fail if any commands fails
+set -x
+
+# change to root directory
+while [ ! -d ".git/" ]; do
+	current_dir=`pwd`
+	if [ "${current_dir}" == "/" ]; then
+		echo "[Error] could not find repository root path" 1>&2
+		exit "${LINENO}"
+	else
+		cd ..
+	fi
+done
+
+# return result
+echo `pwd`

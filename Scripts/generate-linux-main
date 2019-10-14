@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+# fail if any commands fails
+set -x
+
+# Execute command:
+
+readonly scripts_path="$( cd "$(dirname "$0")" ; pwd -P )"
+readonly root_directory=`"${scripts_path}/repository-root-path"`
+
+cd "${root_directory}"
+
+swift test --generate-linuxmain
