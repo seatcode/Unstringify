@@ -1,0 +1,15 @@
+project 'MainBundleExample.xcodeproj'
+
+target 'MainBundleExample' do
+  use_frameworks!
+
+  pod 'Unstringified', :path => '../../'
+
+  script_phase :name => 'Unstringify', :script => '"$PODS_ROOT/Unstringify/unstringify" "$SRCROOT/MainBundleExample/l10n/en.lproj/Localizable.strings" "$SRCROOT/MainBundleExample/l10n/Unstringified.generated.swift"', :execution_position => :before_compile
+
+  post_install do |installer|
+    system("curl -L https://github.com/metrolab/Unstringify/releases/download/0.3.0/unstringify-0.3.0.zip -L --output unstringify.zip")
+    system("unzip unstringify.zip -d Pods/Unstringify")
+    system("rm unstringify.zip")
+  end
+end
