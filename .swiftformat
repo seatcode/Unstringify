@@ -7,6 +7,8 @@
 
 # file options
 --exclude Sources/unstringify/Internal/template.swift
+--exclude Tests/UnstringifyFrameworkTests/UnstringifyFrameworkTests.swift
 
 # rules
---disable redundantReturn
+--ifdef no-indent
+--commas inline
