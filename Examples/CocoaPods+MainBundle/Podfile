@@ -9,7 +9,7 @@ target 'MainBundleExample' do
 
   post_install do |installer|
     system("curl -L https://github.com/metrolab/Unstringify/releases/download/0.3.0/unstringify-0.3.0.zip -L --output unstringify.zip")
-    system("unzip unstringify.zip -d Pods/Unstringify")
+    system("unzip -o -d Pods/Unstringify unstringify.zip")
     system("rm unstringify.zip")
   end
 end

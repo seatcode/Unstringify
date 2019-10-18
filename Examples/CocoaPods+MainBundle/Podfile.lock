@@ -1,5 +1,5 @@
 PODS:
-  - Unstringified (0.3.0)
+  - Unstringified (0.3.1)
 
 DEPENDENCIES:
   - Unstringified (from `../../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../../"
 
 SPEC CHECKSUMS:
-  Unstringified: 29c4a14bb21b543cff7f858473e9522c30ba7148
+  Unstringified: 80a50c6a1596343789f0e95552f83fd52871a20e
 
-PODFILE CHECKSUM: c5ccdaf6e0860f5d00770e81679fa36bf86ff515
+PODFILE CHECKSUM: d3a47cb925871a3f81db852dbbd59599f75984e4
 
 COCOAPODS: 1.7.4

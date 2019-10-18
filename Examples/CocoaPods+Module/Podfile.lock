@@ -1,7 +1,7 @@
 PODS:
   - Commons (1.0):
     - Unstringified
-  - Unstringified (0.3.0)
+  - Unstringified (0.3.1)
 
 DEPENDENCIES:
   - Commons (from `Modules/Commons/`)
@@ -15,8 +15,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Commons: e9069e5e7c1b0cf8c0e3bba77e0d7c39f2a61f0e
-  Unstringified: 29c4a14bb21b543cff7f858473e9522c30ba7148
+  Unstringified: 80a50c6a1596343789f0e95552f83fd52871a20e
 
-PODFILE CHECKSUM: 704a57c66433d5769c37b6390704ebe522a1d62b
+PODFILE CHECKSUM: fe408bb75f071109fd01d3a8bc8d971b401816ce
 
 COCOAPODS: 1.7.4
