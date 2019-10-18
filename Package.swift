@@ -4,6 +4,12 @@ import PackageDescription
 
 let package = Package(
     name: "Unstringify",
+    products: [
+        .executable(name: "unstringify", targets: ["unstringify"]),
+        .library(name: "Unstringified", targets: ["Unstringified"]),
+        .executable(name: "findStrings", targets: ["findStrings"]),
+        .executable(name: "findAndroidStrings", targets: ["findAndroidStrings"])
+    ],
     targets: [
         .target(
             name: "unstringify",
