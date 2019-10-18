@@ -6,7 +6,7 @@ struct FormatKey: CustomStringConvertible {
 
     var description: String {
         let params = specifiers.map { specifier in
-            return "_: \(typeName(for: specifier))"
+            "_: \(typeName(for: specifier))"
         }
         return "\(key)(\(params.joined(separator: ", ")))"
     }

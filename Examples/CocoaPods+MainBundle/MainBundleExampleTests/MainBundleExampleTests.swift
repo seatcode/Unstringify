@@ -1,5 +1,5 @@
-import XCTest
 @testable import MainBundleExample
+import XCTest
 
 class MainBundleExampleTests: XCTestCase {
     func test() {

@@ -13,13 +13,13 @@ extension UnstringifyFrameworkTests {
         ("testLocalizableKey", testLocalizableKey),
         ("testMatches", testMatches),
         ("testParseKeys", testParseKeys),
-        ("testRemovingCharacterAt", testRemovingCharacterAt),
+        ("testRemovingCharacterAt", testRemovingCharacterAt)
     ]
 }
 
 public func __allTests() -> [XCTestCaseEntry] {
     return [
-        testCase(UnstringifyFrameworkTests.__allTests__UnstringifyFrameworkTests),
+        testCase(UnstringifyFrameworkTests.__allTests__UnstringifyFrameworkTests)
     ]
 }
 #endif

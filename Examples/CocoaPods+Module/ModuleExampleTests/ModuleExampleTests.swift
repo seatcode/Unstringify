@@ -1,5 +1,5 @@
-import XCTest
 @testable import ModuleExample
+import XCTest
 
 class ModuleExampleTests: XCTestCase {
     func test() {

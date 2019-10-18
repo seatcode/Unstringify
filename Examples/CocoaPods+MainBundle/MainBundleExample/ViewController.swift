@@ -1,11 +1,11 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var formTitle: UILabel?
-    @IBOutlet weak var fieldName: UILabel?
-    @IBOutlet weak var fieldDescription: UILabel?
-    @IBOutlet weak var fieldLimit: UILabel?
-    @IBOutlet weak var input: UITextField?
+    @IBOutlet var formTitle: UILabel?
+    @IBOutlet var fieldName: UILabel?
+    @IBOutlet var fieldDescription: UILabel?
+    @IBOutlet var fieldLimit: UILabel?
+    @IBOutlet var input: UITextField?
 
     override func viewDidLoad() {
         super.viewDidLoad()

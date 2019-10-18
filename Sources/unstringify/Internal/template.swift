@@ -1,5 +1,6 @@
 import Foundation
 
+// swiftlint:disable:next function_body_length
 func template(keys: [String], formattedKeys: [FormatKey], richKeys: [String], richFormattedKeys: [FormatKey]) -> String {
     let file: String =
         """

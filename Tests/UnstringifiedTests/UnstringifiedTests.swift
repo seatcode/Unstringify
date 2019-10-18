@@ -1,5 +1,5 @@
-import XCTest
 import Unstringified
+import XCTest
 
 final class UnstringifiedTests: XCTestCase {
     private final class _Foo {}
@@ -24,6 +24,6 @@ final class UnstringifiedTests: XCTestCase {
 
     static var allTests = [
         ("testString", testString),
-        ("testUppercased", testUppercased),
+        ("testUppercased", testUppercased)
     ]
 }

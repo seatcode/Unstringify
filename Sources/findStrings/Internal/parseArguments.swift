@@ -22,4 +22,3 @@ func parseArguments(from arguments: [String] = CommandLine.arguments) throws -> 
         return (arguments[1], arguments[2], arguments[3], "Unstringify.generated.swift")
     }
 }
-

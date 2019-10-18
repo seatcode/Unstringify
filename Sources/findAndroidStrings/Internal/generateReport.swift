@@ -15,7 +15,7 @@ func generateReport(files: [String], keys: [String], outputPath: String, exclude
             }
         }
     }
-    let csv = matches.reduce(["Keys;File\n"]) { return $0 + ["\"\($1.key)\"; \($1.value.map { "\($0)" }.joined(separator: "; "))"] }.joined(separator: "\n")
+    let csv = matches.reduce(["Keys;File\n"]) { $0 + ["\"\($1.key)\"; \($1.value.map { "\($0)" }.joined(separator: "; "))"] }.joined(separator: "\n")
     let data = csv.data(using: String.Encoding.utf8, allowLossyConversion: false)
     FileManager.default.createFile(atPath: outputPath, contents: data, attributes: nil)
 }
