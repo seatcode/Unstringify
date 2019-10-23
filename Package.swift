@@ -4,39 +4,56 @@ import PackageDescription
 
 let package = Package(
     name: "Unstringify",
+    products: [
+        .executable(name: "unstringify", targets: ["unstringify"]),
+        .library(name: "Unstringified", targets: ["Unstringified"]),
+        .executable(name: "findStrings", targets: ["findStrings"]),
+        .executable(name: "findAndroidStrings", targets: ["findAndroidStrings"])
+    ],
     targets: [
         .target(
             name: "unstringify",
-            dependencies: ["Unstringified", "UnstringifyFramework"]),
+            dependencies: ["Unstringified", "UnstringifyFramework"]
+        ),
         .target(
             name: "Unstringified",
-            dependencies: []),
+            dependencies: []
+        ),
         .target(
             name: "findStrings",
-            dependencies: ["UnstringifyFramework"]),
+            dependencies: ["UnstringifyFramework"]
+        ),
         .target(
             name: "findAndroidStrings",
-            dependencies: ["UnstringifyFramework"]),
+            dependencies: ["UnstringifyFramework"]
+        ),
         .target(
             name: "UnstringifyFramework",
-            dependencies: []),
+            dependencies: []
+        ),
         .target(
             name: "CLITestFramework",
-            dependencies: []),
+            dependencies: []
+        ),
         .testTarget(
             name: "UnstringifyTests",
-            dependencies: ["CLITestFramework", "unstringify"]),
+            dependencies: ["CLITestFramework", "unstringify"]
+        ),
         .testTarget(
             name: "UnstringifiedTests",
-            dependencies: ["Unstringified"]),
+            dependencies: ["Unstringified"]
+        ),
         .testTarget(
             name: "FindStringsTests",
-            dependencies: ["CLITestFramework", "findStrings"]),
+            dependencies: ["CLITestFramework", "findStrings"]
+        ),
         .testTarget(
             name: "FindAndroidStringsTests",
-            dependencies: ["CLITestFramework", "findAndroidStrings"]),
+            dependencies: ["CLITestFramework", "findAndroidStrings"]
+        ),
         .testTarget(
             name: "UnstringifyFrameworkTests",
-            dependencies: ["UnstringifyFramework"]),
+            dependencies: ["UnstringifyFramework"]
+        )
     ]
 )

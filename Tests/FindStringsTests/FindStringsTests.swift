@@ -1,5 +1,5 @@
-import XCTest
 import CLITestFramework
+import XCTest
 
 final class FindStringsTests: XCTestCase {
     func testUsage() throws {
@@ -9,6 +9,6 @@ final class FindStringsTests: XCTestCase {
     }
 
     static var allTests = [
-        ("testUsage", testUsage),
+        ("testUsage", testUsage)
     ]
 }

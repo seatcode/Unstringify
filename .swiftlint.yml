@@ -52,7 +52,7 @@ opt_in_rules: # all opt-in rules up to version 0.35.0
   - last_where
   - legacy_multiple
   - legacy_random
-  - let_var_whitespace
+#  - let_var_whitespace
   - literal_expression_end_indentation
   - lower_acl_than_parent
 #  - missing_docs

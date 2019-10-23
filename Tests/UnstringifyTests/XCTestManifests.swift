@@ -6,13 +6,13 @@ extension UnstringifyTests {
     //   `swift test --generate-linuxmain`
     // to regenerate.
     static let __allTests__UnstringifyTests = [
-        ("testUsage", testUsage),
+        ("testUsage", testUsage)
     ]
 }
 
 public func __allTests() -> [XCTestCaseEntry] {
     return [
-        testCase(UnstringifyTests.__allTests__UnstringifyTests),
+        testCase(UnstringifyTests.__allTests__UnstringifyTests)
     ]
 }
 #endif

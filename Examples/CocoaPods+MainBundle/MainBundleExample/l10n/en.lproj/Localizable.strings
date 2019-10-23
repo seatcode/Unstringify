@@ -1,0 +1,4 @@
+"form_name_field" = "Name:";
+"form_name_field_max_length" = "Maximum length is %d characters.";
+"form_name_field_description" = "Enter your <b>full name</b>";
+"form_title" = "Contact";

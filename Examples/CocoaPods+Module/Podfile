@@ -1,0 +1,15 @@
+project 'ModuleExample.xcodeproj'
+
+target 'ModuleExample' do
+  use_frameworks!
+
+  pod 'Commons', :path => 'Modules/Commons/'
+  pod 'Unstringified', :path => '../../'
+
+  post_install do |installer|
+    system("curl -L https://github.com/metrolab/Unstringify/releases/download/0.3.0/unstringify-0.3.0.zip -L --output unstringify.zip")
+    system("unzip -o -d Pods/Unstringify unstringify.zip")
+    system("rm unstringify.zip")
+    system("Pods/Unstringify/unstringify Modules/Commons/Resources/en.lproj/Localizable.strings Modules/Commons/Resources/Unstringified.generated.swift")
+  end
+end

@@ -11,7 +11,7 @@ extension Unstringified {
             } else {
                 let associatedValuesMirror = Mirror(reflecting: enumCaseMirrorChild.value)
                 return associatedValuesMirror.children.compactMap { associatedValueMirrorChild in
-                    return associatedValueMirrorChild.value as? CVarArg ?? String(describing: associatedValueMirrorChild.value)
+                    associatedValueMirrorChild.value as? CVarArg ?? String(describing: associatedValueMirrorChild.value)
                 }
             }
         }

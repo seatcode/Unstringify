@@ -1,7 +1,7 @@
 #if os(OSX)
-    import AppKit
+import AppKit
 #else
-    import UIKit
+import UIKit
 #endif
 
 extension String {
@@ -9,7 +9,7 @@ extension String {
         let data = Data(utf8)
         let options: [NSAttributedString.DocumentReadingOptionKey: Any] = [
             .documentType: NSAttributedString.DocumentType.html,
-            .characterEncoding: String.Encoding.utf8.rawValue,
+            .characterEncoding: String.Encoding.utf8.rawValue
         ]
         guard let attributed = try? NSMutableAttributedString(data: data,
                                                               options: options,

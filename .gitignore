@@ -1,12 +1,26 @@
 
 ## macOS
+#
 
 .DS_Store
 
 ## SPM
+#
 
 /.build
 /Packages
 /*.xcodeproj
 xcuserdata/
 /.swiftpm
+
+## CocoaPods
+#
+
+Pods/
+*.xcworkspace
+
+## Generated
+#
+
+*.generated.swift
+

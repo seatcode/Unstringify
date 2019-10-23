@@ -7,13 +7,13 @@ extension UnstringifiedTests {
     // to regenerate.
     static let __allTests__UnstringifiedTests = [
         ("testString", testString),
-        ("testUppercased", testUppercased),
+        ("testUppercased", testUppercased)
     ]
 }
 
 public func __allTests() -> [XCTestCaseEntry] {
     return [
-        testCase(UnstringifiedTests.__allTests__UnstringifiedTests),
+        testCase(UnstringifiedTests.__allTests__UnstringifiedTests)
     ]
 }
 #endif

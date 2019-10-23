@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+# fail if any commands fails
+set -x
+
+# Execute command:
+
+readonly scripts_path="$( cd "$(dirname "$0")" ; pwd -P )"
+readonly root_directory=`"${scripts_path}/repository-root-path"`
+
+# test package
+cd "${root_directory}"
+swift test
+
+# test CocoaPods+MainBundle example
+cd "${root_directory}"
+cd Examples/CocoaPods+MainBundle
+pod install
+xcodebuild test -workspace MainBundleExample.xcworkspace/ -scheme MainBundleExample -destination name="iPhone 8"
+
+# test CocoaPods+Module example
+cd "${root_directory}"
+cd Examples/CocoaPods+Module
+pod install
+xcodebuild test -workspace ModuleExample.xcworkspace/ -scheme ModuleExample -destination name="iPhone 8"
+
+# test SPM+MainBundle example
+cd "${root_directory}"
+cd Examples/SPM+MainBundle
+xcodebuild build -workspace Example.xcworkspace/ -scheme Example

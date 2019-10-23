@@ -6,13 +6,13 @@ extension FindStringsTests {
     //   `swift test --generate-linuxmain`
     // to regenerate.
     static let __allTests__FindStringsTests = [
-        ("testUsage", testUsage),
+        ("testUsage", testUsage)
     ]
 }
 
 public func __allTests() -> [XCTestCaseEntry] {
     return [
-        testCase(FindStringsTests.__allTests__FindStringsTests),
+        testCase(FindStringsTests.__allTests__FindStringsTests)
     ]
 }
 #endif
