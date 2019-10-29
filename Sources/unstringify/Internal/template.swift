@@ -31,25 +31,27 @@ func template(keys: [String], formattedKeys: [FormatKey], richKeys: [String], ri
             \t\treturn Bundle(path: path)
             \t}
             }
+            
+            extension String {
+            \tpublic enum Text: String, Unstringified {
+            \t\tpublic typealias StringType = String
+            \t\tcase \(keys.joined(separator: ", "))
+            \t}
 
-            public enum Text: String, Unstringified {
-            \tpublic typealias StringType = String
-            \tcase \(keys.joined(separator: ", "))
-            }
+            \tpublic enum Format: Unstringified {
+            \t\tpublic typealias StringType = String
+            \t\tcase \(formattedKeys.map { $0.description }.joined(separator: ", "))
+            \t}
 
-            public enum Format: Unstringified {
-            \tpublic typealias StringType = String
-            \tcase \(formattedKeys.map { $0.description }.joined(separator: ", "))
-            }
+            \tpublic enum RichText: String, Unstringified {
+            \t\tpublic typealias StringType = NSAttributedString
+            \t\tcase \(richKeys.joined(separator: ", "))
+            \t}
 
-            public enum RichText: String, Unstringified {
-            \tpublic typealias StringType = NSAttributedString
-            \tcase \(richKeys.joined(separator: ", "))
-            }
-
-            public enum RichFormat: Unstringified {
-            \tpublic typealias StringType = NSAttributedString
-            \tcase \(richFormattedKeys.map { $0.description }.joined(separator: ", "))
+            \tpublic enum RichFormat: Unstringified {
+            \t\tpublic typealias StringType = NSAttributedString
+            \t\tcase \(richFormattedKeys.map { $0.description }.joined(separator: ", "))
+            \t}
             }
 
             """.replacingOccurrences(of: "\t", with: "    ")

@@ -116,25 +116,28 @@ extension Unstringified {
     }
 }
 
-public enum Text: String, Unstringified {
-    public typealias StringType = String
-    case form_title, form_name_field
+extension String {    
+    public enum Text: String, Unstringified {
+        public typealias StringType = String
+        case text_localized_1, text_localized_2, text_localized_3, text_localized_4
+    }
+    
+    public enum Format: Unstringified {
+        public typealias StringType = String
+        case 👻(_: Int)
+    }
+    
+    public enum RichText: String, Unstringified {
+        public typealias StringType = NSAttributedString
+        case 👻
+    }
+    
+    public enum RichFormat: Unstringified {
+        public typealias StringType = NSAttributedString
+        case 👻(_: Int)
+    }
 }
 
-public enum Format: Unstringified {
-    public typealias StringType = String
-    case form_name_field_max_length(Int)
-}
-
-public enum RichText: String, Unstringified {
-    public typealias StringType = NSAttributedString
-    case form_name_field_description
-}
-
-public enum RichFormat: Unstringified {
-    public typealias StringType = NSAttributedString
-    case 👻(Void)
-}
 ```
 
 ### Customization
