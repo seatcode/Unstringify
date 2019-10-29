@@ -10,6 +10,7 @@ writeSwiftFile(keys.standard,
                keys.formatted,
                keys.rich,
                keys.richFormatted,
-               outputPath: arguments.outputPath)
+               outputPath: arguments.outputPath,
+               templatePath: arguments.templatePath)
 
 print("Done!")
