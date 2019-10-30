@@ -9,9 +9,9 @@ final class UnstringifiedTests: XCTestCase {
 
         case foo
 
-        var localizableStringsTableName: String? { return nil }
+        var localizableStringsTableName: String? { nil }
 
-        var localizableStringsBundle: Bundle? { return Bundle(for: _Foo.self) }
+        var localizableStringsBundle: Bundle? { Bundle(for: _Foo.self) }
     }
 
     func testString() throws {

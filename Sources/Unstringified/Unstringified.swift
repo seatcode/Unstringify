@@ -11,32 +11,32 @@ public protocol Unstringified {
 
 extension Unstringified where Self: RawRepresentable, Self.RawValue == String, StringType == String {
     public var string: String {
-        return plainString
+        plainString
     }
 }
 
 extension Unstringified where Self: RawRepresentable, Self.RawValue == String, StringType == NSAttributedString {
     public var string: NSAttributedString {
-        return plainString.toAttributed()
+        plainString.toAttributed()
     }
 }
 
 extension Unstringified where StringType == String {
     public var string: String {
-        return formattedString
+        formattedString
     }
 
     public var uppercased: String {
-        return string.uppercased()
+        string.uppercased()
     }
 }
 
 extension Unstringified where StringType == NSAttributedString {
     public var string: NSAttributedString {
-        return formattedString.toAttributed()
+        formattedString.toAttributed()
     }
 
     public var uppercased: NSAttributedString {
-        return string.uppercased()
+        string.uppercased()
     }
 }

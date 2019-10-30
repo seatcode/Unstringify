@@ -11,7 +11,7 @@ extension FindAndroidStringsTests {
 }
 
 public func __allTests() -> [XCTestCaseEntry] {
-    return [
+    [
         testCase(FindAndroidStringsTests.__allTests__FindAndroidStringsTests)
     ]
 }

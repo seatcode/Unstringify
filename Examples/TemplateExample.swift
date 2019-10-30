@@ -8,9 +8,9 @@ private final class _Unstringified {}
 
 extension Unstringified {
     public var localizableStringsTableName: String? {
-        return nil
+        nil
     }
-    
+
     public var localizableStringsBundle: Bundle? {
         let _UnstringifiedBundle = Bundle(for: _Unstringified.self)
         guard _UnstringifiedBundle.bundleIdentifier != Bundle.main.bundleIdentifier else {
@@ -31,17 +31,17 @@ public enum Localizable {
         public typealias StringType = String
         case $KEYS_ARRAY
     }
-    
+
     public enum Format: Unstringified {
         public typealias StringType = String
         case $FORMATED_KEYS_ARRAY
     }
-    
+
     public enum RichText: String, Unstringified {
         public typealias StringType = NSAttributedString
         case $RICH_KEYS_ARRAY
     }
-    
+
     public enum RichFormat: Unstringified {
         public typealias StringType = NSAttributedString
         case $FORMATED_RICH_KEYS_ARRAY
