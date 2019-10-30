@@ -6,7 +6,7 @@ print("Generating enums...")
 
 let keys = try generateKeys(localizablePath: arguments.localizablePath)
 
-writeSwiftFile(keys.standard,
+try writeSwiftFile(keys.standard,
                keys.formatted,
                keys.rich,
                keys.richFormatted,

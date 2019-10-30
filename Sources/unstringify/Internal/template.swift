@@ -2,15 +2,17 @@ import Foundation
 import UnstringifyFramework
 
 // swiftlint:disable:next function_body_length
-func template(keys: [String], formattedKeys: [FormatKey], richKeys: [String], richFormattedKeys: [FormatKey], templatePath: String? = nil) -> String {
-    do {
-        if let templatePath = templatePath {
+func template(keys: [String], formattedKeys: [FormatKey], richKeys: [String], richFormattedKeys: [FormatKey], templatePath: String? = nil) throws -> String {
+    
+    if let templatePath = templatePath {
+        do {
             var templateContent = try readFile(at: templatePath)
             templateContent = replaceVariables(content: templateContent, keys: keys, formattedKeys: formattedKeys, richKeys: richKeys, richFormattedKeys: richFormattedKeys)
             return templateContent
+        } catch {
+             print("Error, the template file can not be read")
+            throw ParseArgumentsError.tooManyArguments
         }
-    } catch {
-        
     }
     
     var file: String =
@@ -65,7 +67,7 @@ func template(keys: [String], formattedKeys: [FormatKey], richKeys: [String], ri
             
             """.replacingOccurrences(of: "\t", with: "    ")
     
-   file = replaceVariables(content: file, keys: keys, formattedKeys: formattedKeys, richKeys: richKeys, richFormattedKeys: richFormattedKeys)
+    file = replaceVariables(content: file, keys: keys, formattedKeys: formattedKeys, richKeys: richKeys, richFormattedKeys: richFormattedKeys)
     
     return file
 }

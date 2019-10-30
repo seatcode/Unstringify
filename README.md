@@ -152,7 +152,9 @@ extension Text {
 
 #### Template
 
-You can customize your own template. Your template must have the variables to replace:
+You can also customize the generated code by using a custom template.
+
+Your template must contain the following variables:
 - $KEYS_ARRAY
 - $FORMATED_KEYS_ARRAY
 - $RICH_KEYS_ARRAY
