@@ -19,7 +19,7 @@ extension String {
     }
 
     private func strippingMarkup() -> String {
-        return replacingOccurrences(of: "<b>", with: "")
+        replacingOccurrences(of: "<b>", with: "")
             .replacingOccurrences(of: "</b>", with: "")
             .replacingOccurrences(of: "<i>", with: "")
             .replacingOccurrences(of: "</i>", with: "")

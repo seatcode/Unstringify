@@ -11,7 +11,7 @@ extension UnstringifyTests {
 }
 
 public func __allTests() -> [XCTestCaseEntry] {
-    return [
+    [
         testCase(UnstringifyTests.__allTests__UnstringifyTests)
     ]
 }

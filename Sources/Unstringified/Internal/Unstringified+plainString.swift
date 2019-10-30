@@ -9,6 +9,6 @@ extension Unstringified where Self: RawRepresentable, Self.RawValue == String {
     }
 
     private var key: String {
-        return rawValue
+        rawValue
     }
 }

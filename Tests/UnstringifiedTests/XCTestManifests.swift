@@ -12,7 +12,7 @@ extension UnstringifiedTests {
 }
 
 public func __allTests() -> [XCTestCaseEntry] {
-    return [
+    [
         testCase(UnstringifiedTests.__allTests__UnstringifiedTests)
     ]
 }
