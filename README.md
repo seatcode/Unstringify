@@ -73,8 +73,9 @@ CLI usage:
 
 ```
 $ ./unstringify
-Usage: ./unstringify inputPath outputPath
+Usage: ./unstringify inputPath outputPath templatePath
 ```
+**Note:** *`templatePath` is optional.*
 
 Input (e.g. `en.lproj/Localizable.strings`):
 
@@ -148,6 +149,14 @@ extension Text {
     }
 }
 ```
+
+#### Template
+
+You can customize your own template. Your termplate has variable:
+- $KEYS_ARRAY
+- $FORMATED_KEYS_ARRAY
+- $RICH_KEYS_ARRAY
+- $FORMATED_RICH_KEYS_ARRAY
 
 ### Examples
 
