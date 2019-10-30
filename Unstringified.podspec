@@ -1,11 +1,11 @@
 Pod::Spec.new do |s|
   s.name     = 'Unstringified'
-  s.version  = '0.3.1'
+  s.version  = '0.3.2'
   s.summary  = 'Strong-typed localizable strings static  code.'
   s.homepage = 'https://github.com/metrolab/Unstringify'
   s.license  = 'MIT'
   s.author   = { 'metrolab' => 'hello@metropolis-lab.io' }
-  s.source   = { :git => 'https://github.com/metrolab/Unstringified.git', :tag => s.version.to_s }
+  s.source   = { :git => 'https://github.com/metrolab/Unstringify.git', :tag => s.version.to_s }
 
   s.source_files = 'Sources/Unstringified/**/*.swift'
 
