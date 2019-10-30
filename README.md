@@ -152,7 +152,7 @@ extension Text {
 
 #### Template
 
-You can customize your own template. Your termplate has variable:
+You can customize your own template. Your template must have the variables to replace:
 - $KEYS_ARRAY
 - $FORMATED_KEYS_ARRAY
 - $RICH_KEYS_ARRAY
