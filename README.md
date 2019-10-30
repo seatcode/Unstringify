@@ -73,7 +73,7 @@ CLI usage:
 
 ```
 $ ./unstringify
-Usage: ./unstringify inputPath outputPath templatePath
+Usage: ./unstringify inputPath outputPath [templatePath]
 ```
 **Note:** *`templatePath` is optional.*
 
