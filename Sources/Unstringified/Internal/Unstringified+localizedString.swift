@@ -5,14 +5,11 @@ extension Unstringified {
         guard !isRunningTests else {
             return key
         }
-        let tableName = localizableStringsTableName
+        let mainBundleString = NSLocalizedString(key, tableName: localizableStringsTableName, comment: "")
         guard let localizableStringsBundle = localizableStringsBundle else {
-            return NSLocalizedString(key, tableName: tableName, comment: "")
+            return mainBundleString
         }
-        let localizedString = NSLocalizedString(key, tableName: tableName, bundle: localizableStringsBundle, comment: "")
-        if localizedString == key {
-            return NSLocalizedString(key, tableName: tableName, comment: "")
-        }
-        return localizedString
+        let localizedString = NSLocalizedString(key, tableName: localizableStringsTableName, bundle: localizableStringsBundle, comment: "")
+        return mainBundleString == key ? localizedString : mainBundleString
     }
 }
